@@ -1,0 +1,51 @@
+@keyframes color {
+    0% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+
+@keyframes scale {
+    0%  {
+        transform:scale(0.5); 
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale4 {
+
+    0%,  100% {
+        transform: scaleY(1);
+    }
+
+    50%{
+        transform: scaleY(0.5)
+    }
+
+}
+
+@keyframes color5 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+

@@ -1,0 +1,8 @@
+@import 'components/container';
+@import 'utils/mixins';
+@import 'utils/keyframes';
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+}
