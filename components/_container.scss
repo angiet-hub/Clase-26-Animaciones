@@ -4,22 +4,30 @@
     height: 300px;
     position: relative;
 
-    @for $i from 1 through 8 {
+    .boxs {
+        @for $i from 1 through 8 {
          & :nth-child(#{$i}) {
            animation-delay: #{$i / 20 * 2}s;
        }
      }
-
-    .box {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    animation: color 1s infinite;
-    animation-delay: inherit;
     }
 
+    .box {    
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute; 
+        animation-name: color;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;    
+
+        @for $i from 1 through 8 {               
+             &:nth-child(#{$i}) {
+                animation-delay: #{$i / 20 * 2}s;
+            }
+        }
+    }
     .one {
         left: 44%;
         top: 52px;
@@ -161,6 +169,8 @@
     background-color: rgb(74, 74, 179);
     width: 300px;
     height: 300px;
+    margin:26px;
+    
 
     .dots {
         display: flex;
@@ -168,10 +178,11 @@
         margin: 71px;
         flex-wrap: wrap;
         
-        &:nth-child(even) {
+        & :nth-child(even) {
             animation-delay: .1s;
         }
-        &:nth-child(odd) {
+
+        & :nth-child(odd) {
             animation-delay: .2s;
         }
 
@@ -181,9 +192,76 @@
         border-radius: 50%;
         background-color: white;
         margin: 10px;
-        animation: color5 .3s infinite;
+        animation-name: color5;
+        animation-duration: .3s; 
+        animation-iteration-count: infinite;
         }
     } 
    
 }
 
+.container-six {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 22px;
+
+    .square {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(206, 65, 206);
+        margin:10px;
+        animation-name: fall;
+        animation-duration: 1.5s;
+    }
+
+   
+    .fi {
+        animation-delay: .1s;
+    }
+    .fo {
+        animation-delay: .2s;
+    }
+
+    .th {
+        animation-delay: .3s;
+    }
+    .twelve {
+        animation-delay: .4s;
+    }
+
+    .eleven {
+        animation-delay: .5s;
+    }
+
+    .ten {
+        animation-delay: .6s;
+    }
+    .nine {
+        animation-delay: .7s;
+    }
+    .eight{
+        animation-delay: .8s;
+    }
+    .seven{
+        animation-delay: .9s;
+    }
+    .six {
+        animation-delay: .10s;
+    }
+    .five {
+        animation-delay: .11s;
+    }
+    .four {
+        animation-delay: .12s;
+    }
+    .three {
+        animation-delay: .13s;
+    }
+    .two {
+        animation-delay: .14s;
+    }
+    .one {
+        animation-delay: .15s;
+    }
+}
